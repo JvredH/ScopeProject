@@ -16,7 +16,17 @@ console.log(rudePerson2("I love dogs")); // prints "I yo love yo dogs"
 
 ***********************************************************************/
 
-// Your code here
+let interrupter = function(interruptingWord) {
+  return function() {
+    let newArray = [];
+    let words = interruptingWord.split(' ');
+    for (let i = 0; i < words.length; i++) {
+      let word = words[i]
+      newArray.push(word, interruptingWord);
+      return newArray
+    }
+  }
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
